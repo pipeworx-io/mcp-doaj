@@ -1,0 +1,90 @@
+[
+  {
+    "name": "search_articles",
+    "description": "Search peer-reviewed open-access articles. Supports Lucene-style field queries (title:climate, abstract:\"machine learning\", year:2023, author:Doe).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Free-text or Lucene-style query"
+        },
+        "page": {
+          "type": "number",
+          "description": "1-based page (default 1)"
+        },
+        "page_size": {
+          "type": "number",
+          "description": "1-100 (default 10)"
+        },
+        "sort": {
+          "type": "string",
+          "description": "Sort field:dir, e.g. \"created_date:desc\""
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "search_journals",
+    "description": "DOAJ (Directory of Open Access Journals) — search the curated index of vetted, peer-reviewed open-access journals, with free text or Lucene-style field queries. Returns each journal's DOAJ id, title, ISSNs, publisher, country, subject terms, licence and article-processing-charge details. Answers which open-access journals publish in a field, who publishes them, and what they charge authors.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Free-text or Lucene-style query"
+        },
+        "page": {
+          "type": "number",
+          "description": "1-based page"
+        },
+        "page_size": {
+          "type": "number",
+          "description": "1-100 (default 10)"
+        },
+        "sort": {
+          "type": "string",
+          "description": "Sort field:dir"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "get_article",
+    "description": "Fetch an article by DOAJ id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "DOAJ article id"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "get_journal",
+    "description": "Fetch a journal by DOAJ id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "DOAJ journal id"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  }
+]
