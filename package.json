@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-doaj",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "DOAJ MCP — Directory of Open Access Journals",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "doaj",
     "gatewaySlug": "doaj",
-    "sourceHash": "v1-56ffbc7c6df5d5d1f466124c9f3ca5e7c9d582875e60f3b539c89041a5ffb2ea",
-    "sourceCommit": "0b3faaa4d85299a961dd86dea75a0f0e1dad280c"
+    "sourceHash": "v1-acfb3ca7e6fb46d3fae86368dda8c625ed666ce98b0cf09066dab20a4cdaa7b7",
+    "sourceCommit": "e707a4bb6209f432984c0a83bf64b3138130db89"
   }
 }
